@@ -1,11 +1,17 @@
 import React, { Fragment } from 'react'
+import Head from 'next/head'
 import getUser from '../utils/getUser'
 import {GrLinkedin, GrGithub, GrYoutube, GrInstagram} from 'react-icons/gr'
 import {GoRepo, GoStar, GoGist} from 'react-icons/go'
+import {DiHtml5, DiCss3, DiJavascript, DiReact, DiNodejsSmall} from 'react-icons/di'
+import {SiNextDotJs, SiTailwindcss, SiCsharp} from 'react-icons/si'
 
 const Index = ({repos, user}) => {
     return (
         <div className='container mx-auto bg-network'>
+            <Head>
+                <title>Igor Martins - Fullstack Developer</title>
+            </Head>
             <div className='grid grid-cols-2 pt-16 leading-none'>
                 <div className='pt-32'>
                     <h1 className='text-4xl uppercase pl-16'>Igor Martins</h1>
@@ -39,7 +45,20 @@ const Index = ({repos, user}) => {
                         <li className='hover:underline'>Microsoft SQL Server Maintenance</li>
                         <li className='hover:underline'>ERP development using Delphi</li>
                     </ul>
-                </div>   
+                </div>
+                <div className='m-2'>
+                    <p className='font-bold'>Interests:</p>
+                    <p className='text-6xl inline-block mt-4'>
+                            <DiHtml5 className='inline-block mr-4' title='HTML5'/>
+                            <DiCss3 className='inline-block mr-4' title='CSS'/>
+                            <DiJavascript className='inline-block mr-4' title='JavaScript'/>
+                            <DiReact className='inline-block mr-4' title='ReactJS'/>
+                            <SiNextDotJs className='inline-block mr-4' title='NEXT.js'/>
+                            <DiNodejsSmall className='inline-block mr-4' title='Node.js'/>
+                            <SiTailwindcss className='inline-block mr-4' title='Tailwind CSS'/>
+                            <SiCsharp className='inline-block mr-4' title='C#'/>
+                        </p>
+                </div>
             </div>
 
             <div className='mt-12'>
@@ -59,7 +78,7 @@ const Index = ({repos, user}) => {
 
             <div className='mt-12'>
                 <h3 className='uppercase text-center text-4xl font-bold text-rose'>Tech Contributions</h3>
-                <p className='px-10 pt-4 font-bold text-center'>
+                <p className='px-10 pt-4 font-bold text-center mb-4'>
                     GitHub Stats: 
                     <GoRepo className='inline-block ml-2'/>{user.public_repos} / 
                     <GoGist className='inline-block ml-2'/>{user.public_gists}
@@ -79,6 +98,12 @@ const Index = ({repos, user}) => {
                     )
                 })}
                 </div>
+            </div>
+
+            <div className='my-8'>
+                <p className='text-center border-t-2'>You can find the source-code of this website here:<br />
+                    <a href='https://github.com/igormpmartins/igor-martins.dev-v2' className='font-bold'>https://github.com/igormpmartins/igor-martins.dev-v2</a>
+                </p>
             </div>
 
         </div>
