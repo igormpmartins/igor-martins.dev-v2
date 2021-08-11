@@ -7,6 +7,8 @@ body {
     background: #F3F4FB;
 }
 
-.bg-network {
-    background: url('/images/back-network.png') top right no-repeat;
+@media (min-width: 600px) {
+    .bg-network {
+        background: url('/images/back-network.png') top right no-repeat;
+    }
 }
