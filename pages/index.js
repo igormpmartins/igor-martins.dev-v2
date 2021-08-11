@@ -1,39 +1,23 @@
-import React, { Fragment } from 'react'
-import Head from 'next/head'
+import React from 'react'
+
 import getUser from '../utils/getUser'
-import {GrLinkedin, GrGithub, GrYoutube, GrInstagram} from 'react-icons/gr'
+
 import {GoRepo, GoStar, GoGist} from 'react-icons/go'
 import {DiHtml5, DiCss3, DiJavascript, DiReact, DiNodejsSmall} from 'react-icons/di'
 import {SiNextDotJs, SiTailwindcss, SiCsharp} from 'react-icons/si'
 
+import PageHead from '../Components/PageHead'
+import Hero from '../Components/Hero'
+
 const Index = ({repos, user}) => {
     return (
-        <div className='container mx-auto bg-network'>
-            <Head>
-                <title>Igor Martins - Fullstack Developer</title>
-            </Head>
-            <div className='grid grid-cols-2 pt-16 leading-none'>
-                <div className='pt-32'>
-                    <h1 className='text-4xl uppercase pl-16'>Igor Martins</h1>
-                    <h2 className='font-bold text-5xl uppercase pl-16'>Fullstack Developer</h2>
-                    <div className='border rounded-lg border-rose px-16 pb-4 mt-6'>
-                        <h3 className='text-2xl text-white bg-rose bold uppercase -mt-5 table px-6 py-1'>Contact me</h3>
-                        <p className='text-6xl inline-block mt-4'>
-                            <GrLinkedin className='inline-block mr-4'/>
-                            <GrGithub className='inline-block mr-4'/>
-                            <GrInstagram className='inline-block mr-4'/>
-                            <GrYoutube className='inline-block mr-4'/>
-                        </p>
-                        <p className='mt-4'>or drop a line: igormpmartins@gmail.com</p>
-                    </div>
-                    
-                </div>
-                <div><img className='mt-16' src="/images/buzz-sem fundo.png" /></div>
-            </div>
+        <div className='container mx-auto md:bg-network'>
+            <PageHead />
+            <Hero />
             
-            <div className='bg-white rounded-lg shadow-lg py-12 px-16'>
-                <h3 className='uppercase text-center text-4xl mb-4 text-rose font-bold'>What I do</h3>
-                <p className='text-2xl'>Software Developer for more than 20 years, having a vast experience in ERP development, using different technologies. 
+            <div className='bg-white rounded-lg shadow-lg py-12 px-3 md:px-16'>
+                <h3 className='uppercase text-center text-4xl mb-4 text-rose font-bold'>Who am I?</h3>
+                <p className='md:text-2xl'>Software Developer for more than 20 years, having a vast experience in ERP development, using different technologies. 
                 Graduated in Information Systems, I'm able to fit both as software analyst and developer. 
                 Also, I'm experienced in providing third level support.
                 </p>
@@ -48,7 +32,7 @@ const Index = ({repos, user}) => {
                 </div>
                 <div className='m-2'>
                     <p className='font-bold'>Interests:</p>
-                    <p className='text-6xl inline-block mt-4'>
+                    <p className='text-2xl md:text-6xl inline-block mt-4'>
                             <DiHtml5 className='inline-block mr-4' title='HTML5'/>
                             <DiCss3 className='inline-block mr-4' title='CSS'/>
                             <DiJavascript className='inline-block mr-4' title='JavaScript'/>
@@ -63,10 +47,10 @@ const Index = ({repos, user}) => {
 
             <div className='mt-12'>
                 <h3 className='uppercase text-center text-4xl font-bold text-rose'>My Education</h3>
-                <div className='grid grid-cols-2 bg-white rounded-lg shadow-lg py-6 mt-5'>
-                    {[1,2].map( i=> {
+                <div className='grid grid-cols-0 bg-white rounded-lg shadow-lg py-6 mt-5'>
+                    {[1].map( i=> {
                         return (
-                        <div className='px-12 border-dashed border-r-2'>
+                        <div className='px-12 md:border-dashed md:border-r-2 text-center' key={i}>
                             <h3 className='text-lg uppercase font-bold mb-2 text-rose'>Graduation Degree</h3>
                             <p className='text-2xl uppercase mb-2'>Information System's</p>
                             <span className='text-lg font-bold'>Unisinos</span>
@@ -83,7 +67,7 @@ const Index = ({repos, user}) => {
                     <GoRepo className='inline-block ml-2'/>{user.public_repos} / 
                     <GoGist className='inline-block ml-2'/>{user.public_gists}
                 </p>
-                <div className="grid grid-cols-3 gap-2">
+                <div className="md:grid md:grid-cols-3 md:gap-2">
                 {repos.map(rep => {
                     return (
                         <div key={rep.id} className='flex-1 rounded bg-white mx-2 my-2 p-2 hover:shadow-md '>
