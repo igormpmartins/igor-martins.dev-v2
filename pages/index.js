@@ -6,8 +6,8 @@ import {GoRepo, GoStar, GoGist} from 'react-icons/go'
 import {DiHtml5, DiCss3, DiJavascript, DiReact, DiNodejsSmall} from 'react-icons/di'
 import {SiNextDotJs, SiTailwindcss, SiCsharp} from 'react-icons/si'
 
-import PageHead from '../components/PageHead'
-import Hero from '../components/Hero'
+import PageHead from '../Components/PageHead'
+import Hero from '../Components/Hero'
 
 const Index = ({repos, user}) => {
     return (
