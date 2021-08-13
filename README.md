@@ -1,7 +1,5 @@
 # igormpmartins.dev (resume)
 
-[![HitCount](https://hits.dwyl.com/tuliofaria/tuliofaria/tuliofariadev.svg)](https://hits.dwyl.com/tuliofaria/tuliofaria/tuliofariadev)
-
 [![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https://github.com/igormpmartins/igor-martins.dev-v2)](https://github.com/igormpmartins/igor-martins.dev-v2)
 
 Este projeto é o código-fonte do curriculo online de Igor Martins, disponível em: https://igormpmartins.com
