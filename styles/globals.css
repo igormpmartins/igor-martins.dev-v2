@@ -3,7 +3,7 @@
 @tailwind utilities;
 /*@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');*/
 
-.bd-body {
+body {
     background: #F3F4FB;
 }
 
