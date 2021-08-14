@@ -1,5 +1,4 @@
 import React from 'react'
-
 import PageHead from '../Components/PageHead'
 import Hero from '../Components/Hero'
 import Summary from '../Components/Summary'
