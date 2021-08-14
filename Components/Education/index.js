@@ -3,9 +3,9 @@ import EducationItem from './EducationItem'
 
 const degrees =  [
     {
-        degree: 'Graduation Degree',
-        title: 'Information System\'s',
-        institution: 'Unisinos'
+        degree: 'Bachelor\'s Degree',
+        title: 'Information Systems',
+        institution: 'Unisinos (Brazil - RS)'
     }
 ]
 
